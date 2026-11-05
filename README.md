@@ -11,7 +11,6 @@ Telegram-бот на Rust ([teloxide, форк lapismyt](https://github.com/lapi
 - `/profile`, `/skin [ник]`, `/cape [ник]` — профиль, скин и активный плащ (свой или по нику).
 - `/language`, `/privacy`, `/delete` — язык, что хранится, удалить все данные.
 
-> **Про «gramio».** [GramIO](https://github.com/gramiojs/gramio) — библиотека для TypeScript/JavaScript, в Rust её использовать нельзя. Весь бот написан на teloxide.
 
 ## Откуда берутся данные (и больше ниоткуда)
 
