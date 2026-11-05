@@ -1,0 +1,24 @@
+[package]
+name = "minecraft-version-bot"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Telegram bot: notifications about new Minecraft Java/Bedrock versions, profile, skin and cape via Mojang/Microsoft APIs"
+
+[dependencies]
+teloxide = { git = "https://github.com/lapismyt/teloxide", default-features = false, features = ["macros", "rustls", "ctrlc_handler"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "time", "fs", "sync"] }
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "json"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+anyhow = "1"
+log = "0.4"
+env_logger = "0.11"
+base64 = "0.22"
+url = "2"
+image = { version = "0.25", default-features = false, features = ["png"] }
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
